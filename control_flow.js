@@ -54,5 +54,26 @@ console.log("User Category:",userCategory); // Output: "Subscriber"
 
 //===============================================
 
-console.log(225*100/450);
+let isAuthenticated = true;
+let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 
+console.log("Authentication Status:",authenticationStatus); // Output: "Authenticated"
+
+//===============================================
+
+let person = "Subscriber";
+
+switch (person) {
+    case "Employee":
+        console.log("You are authorized to have access to \"Dietary Services\"");
+    case "Enrolled Member":
+        console.log("You are authorized to have access to \"Dietary Services\" and one-on-one interaction with a dietician");
+    case "Subscriber":
+        console.log("You are authorized to have partial access to \"Dietary Services\"");
+        break; 
+    default:
+        console.log("need to enroll or at least subscribe first to avail this facility.");
+}
+
+// Output:
+// You are authorized to have partial access to "Dietary Services"
